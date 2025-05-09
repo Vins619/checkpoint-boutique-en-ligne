@@ -1,0 +1,120 @@
+ /* Style général */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  /* En-tête */
+  header {
+    background-color: #111;
+    color: white;
+    padding: 20px 0;
+  }
+  
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section Produits */
+  .produits-section {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .produits-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+  }
+  
+  .produit {
+    color: rgb(255, 255, 255)
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .produit:hover {
+    transform: translateY(-5px);
+  }
+  
+  .produit img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .produit h3 {
+    margin-top: 15px;
+  }
+  
+  .produit button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #111;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .produit button:hover {
+    background-color: #444;
+  }
+  
+  /* Pied de page */
+  footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+  }
+  
+  /* Responsive */
+  @media screen and (max-width: 992px) {
+    .produits-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    header .container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .produits-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  
